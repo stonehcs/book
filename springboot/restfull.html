@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>restfull接口设计规范 | idea|spring技术文档</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/book/logo.png">
+    <meta name="description" content="java项目技术要点文档">
+    <meta name="author" content="cunsenjun">
+    <meta name="keywords" content="idea|spring技术文档">
+    <link rel="preload" href="/book/assets/css/0.styles.6a63a066.css" as="style"><link rel="preload" href="/book/assets/js/app.88b993a7.js" as="script"><link rel="preload" href="/book/assets/js/2.9b571995.js" as="script"><link rel="preload" href="/book/assets/js/18.b72a255a.js" as="script"><link rel="prefetch" href="/book/assets/js/10.7057080f.js"><link rel="prefetch" href="/book/assets/js/11.075f8eaf.js"><link rel="prefetch" href="/book/assets/js/12.ea572fb1.js"><link rel="prefetch" href="/book/assets/js/13.04abef8a.js"><link rel="prefetch" href="/book/assets/js/14.1df1a41b.js"><link rel="prefetch" href="/book/assets/js/15.42d724b9.js"><link rel="prefetch" href="/book/assets/js/16.0a00bbb3.js"><link rel="prefetch" href="/book/assets/js/17.d299e4e6.js"><link rel="prefetch" href="/book/assets/js/19.461f17f3.js"><link rel="prefetch" href="/book/assets/js/20.22228675.js"><link rel="prefetch" href="/book/assets/js/21.70a5f812.js"><link rel="prefetch" href="/book/assets/js/22.3a963181.js"><link rel="prefetch" href="/book/assets/js/23.824f8694.js"><link rel="prefetch" href="/book/assets/js/24.727a62f8.js"><link rel="prefetch" href="/book/assets/js/3.66c23bb7.js"><link rel="prefetch" href="/book/assets/js/4.02768d34.js"><link rel="prefetch" href="/book/assets/js/5.73bbd387.js"><link rel="prefetch" href="/book/assets/js/6.9cbab7c7.js"><link rel="prefetch" href="/book/assets/js/7.2ee11edf.js"><link rel="prefetch" href="/book/assets/js/8.483f613e.js"><link rel="prefetch" href="/book/assets/js/9.1b987890.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.6a63a066.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">idea|spring技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/book/idea/" class="nav-link">
+  idea
+</a></div><div class="nav-item"><a href="/book/springboot/" class="nav-link router-link-active">
+  springbood
+</a></div><div class="nav-item"><a href="/book/springcloud/" class="nav-link">
+  springcloud
+</a></div><div class="nav-item"><a href="https://www.github.com/cunsenjun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/book/idea/" class="nav-link">
+  idea
+</a></div><div class="nav-item"><a href="/book/springboot/" class="nav-link router-link-active">
+  springbood
+</a></div><div class="nav-item"><a href="/book/springcloud/" class="nav-link">
+  springcloud
+</a></div><div class="nav-item"><a href="https://www.github.com/cunsenjun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/book/springboot/" aria-current="page" class="sidebar-link">springboot</a></li><li><a href="/book/springboot/restfull.html" aria-current="page" class="active sidebar-link">restfull接口设计规范</a></li><li><a href="/book/springboot/swagger.html" class="sidebar-link">swagger接口生成</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="restfull接口设计规范"><a href="#restfull接口设计规范" class="header-anchor">#</a> restfull接口设计规范</h1></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">10/10/2020, 5:10:08 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/springboot/" class="prev router-link-active">
+        springboot
+      </a></span> <span class="next"><a href="/book/springboot/swagger.html">
+        swagger接口生成
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.88b993a7.js" defer></script><script src="/book/assets/js/2.9b571995.js" defer></script><script src="/book/assets/js/18.b72a255a.js" defer></script>
+  </body>
+</html>
